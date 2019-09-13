@@ -5,11 +5,10 @@
 @import 'vanilla-framework/scss/build';
 
 // import additional styles
-//@import "sidebar";
 @import "blockquote";
-//@import "docs";
+@import "pattern_separator";
 
-//@include docs;
+@include ubuntu-p-separator;
 
 // Custom styles
 .p-navigation__banner {
@@ -58,4 +57,22 @@
   background-repeat: no-repeat;
   background-size: 77% 115%, 71% 104%, 100% 99.8%;
   color: $color-x-light;
+}
+
+.last-item::after {
+   @media (max-width: $breakpoint-medium) {
+     border-bottom: 1px solid #cdcdcd !important;
+  }
+}
+
+.u-no-margin--bottom__medium {
+  @media (max-width: $breakpoint-medium) {
+    margin-bottom: 0;
+  }
+}
+
+.p-matrix:nth-of-type(1) .p-matrix__item {
+  @media (max-width: $breakpoint-medium) {
+    border-top: 0;
+  }
 }

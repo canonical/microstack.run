@@ -24,14 +24,14 @@ layout: base
       <div class="col-4 p-divider__block u-align--center">
         <h5>Linux</h5>
         <a href="https://snapcraft.io/microstack" title="Get it from the Snap Store">
-          <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" />
+          <img src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" alt="Get it from the Snap Store" width="200" style="padding-top: 2.2rem;" />
         </a>
       </div>
       <div class="col-4 p-divider__block u-align--center">
         <h5>Windows</h5>
         <p>
           <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+            <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" width="150" alt="Windows 10 logo" />
             <br />
             Run it with Multipass
           </a>
@@ -41,7 +41,7 @@ layout: base
         <h5>macOS</h5>
         <p>
           <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/c87ec87a-Multipass-header-option_crop.png" width="150" alt="" />
+            <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" width="150" alt="macOS logo" />
             <br />
             Run it with Multipass
           </a>
@@ -56,21 +56,20 @@ layout: base
         <h2>OpenStack in a snap</h2>
         <h4>Zero-ops OpenStack on just about any Linux box.</h4>
       </div>
-
     </div>
     <div class="row u-equal-height">
       <div class="col-4">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom__medium">
           <li class="p-list__item is-ticked">Keystone</li>
           <li class="p-list__item is-ticked">Glance</li>
-          <li class="p-list__item is-ticked">Nova</li>
+          <li class="p-list__item is-ticked last-item">Nova</li>
         </ul>
       </div>
       <div class="col-4">
-        <ul class="p-list--divided">
+        <ul class="p-list--divided u-no-margin--bottom__medium">
           <li class="p-list__item is-ticked">Neutron with OVS</li>
           <li class="p-list__item is-ticked">Dashboard</li>
-          <li class="p-list__item is-ticked">Metrics</li>
+          <li class="p-list__item is-ticked last-item">Metrics</li>
         </div>
         <div class="col-4">
           <ul class="p-list--divided">
@@ -91,8 +90,7 @@ layout: base
       </div>
     </section>
 
-    <section>
-      <div class="p-strip is-bordered">
+    <section class="p-strip is-bordered">
         <div class="row">
           <h2>Reliable, small, ready to go</h2>
         </div>
@@ -160,10 +158,9 @@ layout: base
             </li>
           </ul>
         </div>
+      <div class="u-fixed-width">
+        <hr class="p-separator" />
       </div>
-    </section>
-
-    <section class="p-strip is-bordered" id="quick-start">
       <div class="row">
         <div class="col-8">
           <h2>Quick start</h2>
@@ -184,7 +181,13 @@ layout: base
           <p>
             Command <code>snap</code> not found? <a class="p-link--external" href="https://snapcraft.io/docs/core/install">Install snapd first.</a>
           </p>
-          <hr>
+        </div>
+      </div>
+      <div class="u-fixed-width">
+        <hr class="p-separator" />
+      </div>
+      <div class="row">
+        <div class="col-8">
           <h3>Configure networks and OpenStack databases</h3>
           <div class="p-code-copyable">
             <input class="p-code-copyable__input" aria-label="sudo microstack.init" value="sudo microstack.init" readonly="readonly">
@@ -193,13 +196,7 @@ layout: base
           <p>
             That’s it! Your OpenStack is ready.
           </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-strip is-shallow is-bordered">
-      <div class="row">
-        <div class="col-8 u-sv3">
+          <hr class="u-sv3">
           <h2>
             Useful tips
           </h2>
