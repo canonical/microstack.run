@@ -5,6 +5,8 @@ title: "Using Juju"
 
 # Using Juju
 
+This page assumes you have installed MicroStack and that your OpenStack cloud
+has been verified via the [Quickstart][quickstart] guide.
 
 ## Install Juju
 
@@ -18,13 +20,11 @@ Juju needs to know how to find metadata for the images necessary for
 provisioning machines. For private clouds such as OpenStack this is done via
 *Simplestreams*. 
 
-First decide on a Ubuntu release and region. Here we'll use Ubuntu 18.04 LTS
-(Bionic) and a region of 'localhost'. Start by importing a Bionic image into
-the cloud:
+First decide on a Ubuntu release. Here we'll use Ubuntu 18.04 LTS (Bionic) so
+we start by importing a Bionic image into the cloud:
 
 ```bash
 OS_SERIES=bionic
-REGION=localhost
 IMAGE_ID=$(curl http://cloud-images.ubuntu.com/$OS_SERIES/current/$OS_SERIES-server-cloudimg-amd64.img | \
 microstack.openstack image create \
 --public --container-format=bare --disk-format=qcow2 \
@@ -42,16 +42,18 @@ Next, generate the metadata:
 
 ```bash
 mkdir ~/simplestreams
-juju metadata generate-image -d ~/simplestreams -i $IMAGE -s $OS_SERIES -r $REGION -u http://10.20.20.1:5000/v3
+OS_REGION=microstack
+KEYSTONE_IP=10.20.20.1
+juju metadata generate-image -d ~/simplestreams -i $IMAGE_ID -s $OS_SERIES -r $OS_REGION -u http://$KEYSTONE_IP:5000/v3
 ```
 
 See [Cloud image metadata][juju-cloud-image-metadata] in the Juju documentation
-for background information.
+for extra information.
 
 ## Add the cloud to Juju
 
 Create a cloud definition file, say `microstack.yaml`, for the OpenStack cloud
-(notice the region of 'localhost'):
+(notice the region of 'microstack'):
 
 ```yaml
 clouds:
@@ -59,7 +61,7 @@ clouds:
       type: openstack
       auth-types: [access-key,userpass]
       regions:
-        localhost:
+        microstack:
            endpoint: http://10.20.20.1:5000/v3
 ```
 
@@ -117,18 +119,56 @@ juju credentials --show-secrets --format yaml
 Create the Juju controller:
 
 ```bash
-juju bootstrap \
---config network=test \
---config external-network=external \
---config use-floating-ip=true \
---metadata-source ~/simplestreams \
+juju bootstrap --bootstrap-series=$OS_SERIES --metadata-source=~/simplestreams \
+--config network=test --config external-network=external --config use-floating-ip=true \
 microstack microstack
 ```
  
-Refer to [ ][ ] for information on the options used in the above command.
+Refer to [Configuring controllers][juju-controller-config] for information on
+the options used in the above command.
 
-## Deploy a Kubernetes workload
+## Deploy a workload
+
+We'll now run a workload on the OpenStack cloud. Here, we'll deploy a small
+Kubernetes cluster via the `kubernetes-core` bundle.
+
+```bash
+juju deploy kubernetes-core
+```
+
+Once the output to `juju status` has settled run the demo Kubernetes "microbot"
+application:
+
+```bash
+juju run-action --wait kubernetes-worker/0 microbot replicas=2
+```
+
+To confirm that the application is running you can query the cluster with the
+`kubectl` utility. Install it now:
+
+```bash
+sudo snap install kubectl --classic
+```
+
+Finally, copy over the cluster's configuration file and query Kubernetes:
+
+```bash
+mkdir ~/.kube
+juju scp kubernetes-master/0:config ~/.kube/config
+kubectl get pods
+```
+
+Sample output:
+
+```no-highlight
+NAME                       READY   STATUS    RESTARTS   AGE
+microbot-594cc9b87-77gjv   1/1     Running   0          7m44s
+microbot-594cc9b87-nkrsk   1/1     Running   0          7m44s
+```
+
 
 <!-- LINKS -->
 
+[quickstart]: index#quickstart
 [juju-cloud-image-metadata]: https://jaas.ai/docs/cloud-image-metadata
+[juju-controller-config]: https://jaas.ai/docs/configuring-controllers
