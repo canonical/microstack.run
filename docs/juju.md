@@ -156,7 +156,6 @@ To confirm that the application is running you can query the cluster with the
 mkdir ~/.kube
 juju scp kubernetes-master/0:config ~/.kube/config
 sudo snap install kubectl --classic
-kubectl get pods
 ```
 
 Sample output:
