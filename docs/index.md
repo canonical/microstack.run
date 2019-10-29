@@ -17,10 +17,12 @@ are currently Glance, Horizon, Keystone, Neutron, and Nova.
 
 ## Installation
 
-Begin by installing MicroStack. It is installed with a [snap][microstack-snap]:
+Begin by installing MicroStack via a [snap][microstack-snap]. Here we use the
+default `--stable` channel but, as with any snap, channels `--beta` and
+`--edge` are also available:
 
 ```bash
-sudo snap install microstack --classic
+sudo snap install microstack --stable --classic
 ```
 
 The standard `openstack` client is also installed, and is invoked like so:
@@ -42,7 +44,7 @@ machine:
 
 Let's begin.
 
-**Configure** OpenStack in this way:
+Configure OpenStack in this way:
 
 <!--
 Revisit the configuration step (interactive?)
@@ -55,10 +57,10 @@ sudo microstack.init --auto
 This configured and started services. It also created the database, networks,
 an image, several flavors, ICMP/SSH security groups, and an SSH keypair.
 
-**Launch** an instance named 'test':
+Launch an instance named 'test':
 
 ```bash
-microstack.launch test
+microstack.launch cirros --name test
 ```
 
 The instance's public IP address will be shown in the resulting output. For
@@ -72,7 +74,7 @@ example:
 +--------------------------------------+------+--------+------------------------------------+--------+---------+
 ```
 
-**Access** that instance using the auto-generated SSH key:
+Access that instance using the auto-generated SSH key:
 
 ```bash
 ssh -i ~/.ssh/id_microstack cirros@10.20.20.202

@@ -5,6 +5,9 @@ title: "Pro tips"
 
 # Pro tips
 
+This page consists of a collection of miscellaneous tips and configurations
+that can improve your experience with MicroStack.
+
 ## Kernel tweaks
 
 OpenStack can potentially run a lot of processes and open a lot of network
