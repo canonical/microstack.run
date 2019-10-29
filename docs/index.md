@@ -8,12 +8,16 @@ title: "Installation and Quickstart"
 MicroStack speedily installs OpenStack on a single machine. Supported services
 are currently Glance, Horizon, Keystone, Neutron, and Nova.
 
-> **Note**: The host will need at least 2 CPUs, 8 GiB of memory, and 100 GiB of
-  disk space.
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Requirements:</span>
+    You will need at least 2 CPUs, 8 GiB of memory, and 100 GiB of disk space.
+  </p>
+</div>
 
 ## Installation
 
-MicroStack is installed with a [snap][microstack-snap]:
+Begin by installing MicroStack. It is installed with a [snap][microstack-snap]:
 
 ```bash
 sudo snap install microstack --classic
@@ -89,10 +93,36 @@ password: keystone
 
 ### Additional instances
 
-Instances can be created using the CirrOS image in this way:
+The initialisation process creates an SSH keypair called 'microstack'. This can
+be confirmed with:
 
 ```bash
-microstack.openstack server create --flavor m1.small --nic net-id=test --image cirros <instance-name>
+microstack.openstack keypair list
+```
+
+Sample output:
+
+```no-highlight
++------------+-------------------------------------------------+
+| Name       | Fingerprint                                     |
++------------+-------------------------------------------------+
+| microstack | 17:94:f6:b8:e2:81:4d:4d:c8:56:c7:00:3a:2f:f1:fd |
++------------+-------------------------------------------------+
+```
+
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>
+    If a keypair is not used with instances based on the CirrOS image, password
+    authentication can be tried. This image sets up a user account of 'cirros'
+    with a password of 'gocubsgo'.
+  </p>
+</div>
+
+Instances can be created with the CirrOS image in this way:
+
+```bash
+microstack.openstack server create --flavor m1.small --nic net-id=test --key-name=microstack --image cirros <instance-name>
 ```
 
 Assign the instance a floating IP address in the usual way:
@@ -102,11 +132,17 @@ ALLOCATED_FIP=$(microstack.openstack floating ip create -f value -c floating_ip_
 microstack.openstack server add floating ip <instance-name> $ALLOCATED_FIP
 ```
 
+And then SSH:
+
+```bash
+ssh -i ~/.ssh/id_microstack cirros@$ALLOCATED_FIP
+```
+
 ### Next steps
 
-This Quickstart has shown you how quick and simple it is to use MicroStack. You
-can now go on to perform your favourite OpenStack operations such as importing
-boot images, creating networks, and creating cloud flavors.
+This Quickstart has shown you how quick and simple it is to get started with
+MicroStack. You can now go on to perform native OpenStack operations such as
+importing boot images; creating keypairs, networks, and cloud flavors.
 
 <!-- LINKS -->
 

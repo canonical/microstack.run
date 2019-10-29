@@ -5,10 +5,15 @@ title: "Using Juju"
 
 # Using Juju
 
-This page assumes you have installed MicroStack and that your OpenStack cloud
-has been verified via the [Quickstart][quickstart] guide.
+*This page assumes you have installed MicroStack and that your OpenStack cloud
+has been verified via the [Quickstart][quickstart] guide.*
+
+Now that you have OpenStack running you can use it as a backing cloud with
+[Juju][juju-homepage].
 
 ## Install Juju
+
+Begin by installing Juju as a snap:
 
 ```bash
 sudo snap install juju --classic
@@ -17,11 +22,11 @@ sudo snap install juju --classic
 ## Generate image metadata for Juju
 
 Juju needs to know how to find metadata for the images necessary for
-provisioning machines. For private clouds such as OpenStack this is done via
-*Simplestreams*. 
+provisioning its machines. For private clouds such as OpenStack this must be
+done manually via *Simplestreams*. 
 
 First decide on a Ubuntu release. Here we'll use Ubuntu 18.04 LTS (Bionic) so
-we start by importing a Bionic image into the cloud:
+we start by importing a Bionic image into OpenStack:
 
 ```bash
 OS_SERIES=bionic
@@ -120,8 +125,8 @@ Create the Juju controller:
 
 ```bash
 juju bootstrap --bootstrap-series=$OS_SERIES --metadata-source=~/simplestreams \
---config network=test --config external-network=external --config use-floating-ip=true \
-microstack microstack
+--model-default network=test --model-default external-network=external \
+--model-default use-floating-ip=true microstack msk
 ```
  
 Refer to [Configuring controllers][juju-controller-config] for information on
@@ -130,31 +135,27 @@ the options used in the above command.
 ## Deploy a workload
 
 We'll now run a workload on the OpenStack cloud. Here, we'll deploy a small
-Kubernetes cluster via the `kubernetes-core` bundle.
+Kubernetes cluster via the `kubernetes-core` bundle within the empty 'default'
+model:
 
 ```bash
 juju deploy kubernetes-core
 ```
 
 Once the output to `juju status` has settled run the demo Kubernetes "microbot"
-application:
+application that came with the bundle:
 
 ```bash
 juju run-action --wait kubernetes-worker/0 microbot replicas=2
 ```
 
 To confirm that the application is running you can query the cluster with the
-`kubectl` utility. Install it now:
-
-```bash
-sudo snap install kubectl --classic
-```
-
-Finally, copy over the cluster's configuration file and query Kubernetes:
+`kubectl` utility:
 
 ```bash
 mkdir ~/.kube
 juju scp kubernetes-master/0:config ~/.kube/config
+sudo snap install kubectl --classic
 kubectl get pods
 ```
 
@@ -166,9 +167,18 @@ microbot-594cc9b87-77gjv   1/1     Running   0          7m44s
 microbot-594cc9b87-nkrsk   1/1     Running   0          7m44s
 ```
 
+To remove everything to do with Kubernetes run these commands:
+
+```bash
+juju destroy-model -y default
+sudo snap remove kubectl
+rm -rf ~/.kube
+```
+
 
 <!-- LINKS -->
 
+[juju-homepage]: https://jaas.ai
 [quickstart]: index#quickstart
 [juju-cloud-image-metadata]: https://jaas.ai/docs/cloud-image-metadata
 [juju-controller-config]: https://jaas.ai/docs/configuring-controllers
