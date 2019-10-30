@@ -18,12 +18,20 @@ are currently Glance, Horizon, Keystone, Neutron, and Nova.
 ## Installation
 
 Begin by installing MicroStack via a [snap][microstack-snap]. Here we use the
-default `--stable` channel but, as with any snap, channels `--beta` and
-`--edge` are also available:
+default `--beta` channel but, as with any snap, channels `--stable`,
+`--candidate` and `--edge` are also available (in principle):
 
 ```bash
-sudo snap install microstack --stable --classic
+sudo snap install microstack --beta --classic
 ```
+
+<div class="p-notification--information">
+  <p class="p-notification__response">
+    <span class="p-notification__status">Note:</span>
+    At time of writing, MicroStack has been assured to run bug-free only on
+    Ubuntu 18.04 LTS.
+  </p>
+</div>
 
 The standard `openstack` client is also installed, and is invoked like so:
 

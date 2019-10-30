@@ -108,6 +108,9 @@ So to SSH to the instance:
 ssh -i ~/.ssh/id_microstack cirros@10.20.20.157
 ```
 
+Without additional network configuration, the above command must be run from
+the control node.
+
 <!-- LINKS -->
 
 [install]: index
