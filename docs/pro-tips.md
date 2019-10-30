@@ -5,8 +5,8 @@ title: "Pro tips"
 
 # Pro tips
 
-This page consists of a collection of miscellaneous tips and configurations
-that can improve your experience with MicroStack.
+This page consists of a collection of tips and optional configurations that may
+improve your experience with MicroStack.
 
 ## Kernel tweaks
 

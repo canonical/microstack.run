@@ -84,7 +84,7 @@ Please enter the ip address of this node [default=10.246.114.25] > ENTER
 ```
 
 The initialisation process for a compute node is much shorter than that of a
-control node. It can take as little as 45 seconds.
+control node. It can take as little as 20 seconds.
 
 ## Cluster verification
 
@@ -107,7 +107,6 @@ So to SSH to the instance:
 ```bash
 ssh -i ~/.ssh/id_microstack cirros@10.20.20.157
 ```
-
 
 <!-- LINKS -->
 
