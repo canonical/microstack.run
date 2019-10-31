@@ -1,6 +1,6 @@
 ---
 layout: base
-title: "Single-node OpenStack"
+title: "Multi-node OpenStack"
 description: "MicroStack is an upstream single-node OpenStack deployment which can run directly on your workstation. Although made for developers, it is also suitable for edge, IoT and appliances."
 ---
 <main id="main-content">
@@ -9,7 +9,7 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
     <div class="row u-vertically-center u-equal-height">
       <div class="col-8">
         <h1>
-          Single-node OpenStack for workstations and edge / IoT
+          Multi-node OpenStack for workstations and edge / IoT
         </h1>
         <p class="p-heading--four u-sv3">
           Install and run OpenStack on Linux in minutes. Made for developers and great for edge, IoT, and appliances.
@@ -32,21 +32,28 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
       <div class="col-4 p-divider__block u-align--center">
         <h5>Windows</h5>
         <p>
-          <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" width="150" alt="Windows 10 logo" />
-            <br />
-            Run it with Multipass
+          <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" width="150" alt="Windows 10 logo" />
+        </p>
+        <p>
+          <a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--neutral js-download" data-os="win-win">
+            <span class="p-link--external">Download Multipass</span>
           </a>
         </p>
       </div>
       <div class="col-4 p-divider__block u-align--center">
-        <h5>macOS</h5>
+        <h5>macOS <sup>*</sup></h5>
         <p>
-          <a href="https://multipass.run/#install">
-            <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" width="150" alt="macOS logo" />
-            <br />
-            Run it with Multipass
+          <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" width="150" alt="macOS logo" />
+        </p>
+        <p>
+          <a href="https://github.com/CanonicalLtd/multipass/releases" class="p-button--neutral js-download" data-os="mac">
+            <span class="p-link--external">Download Multipass</span>
           </a>
+        </p>
+        <p>
+          <small>
+            <sup>*</sup> Yosemite 10.10.3 or later and a 2010 or newer Mac
+          </small>
         </p>
       </div>
     </div>
@@ -83,7 +90,7 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
       <div class="row">
         <div class="col-8">
           <p>
-            A full OpenStack in a single snap package! MicroStack is an upstream single-node OpenStack deployment which can run directly on your workstation. Although made for developers, it is also suitable for edge, IoT and appliances. Do not wait anymore - grab MicroStack from the Snap Store and get your OpenStack running right away!
+            A full OpenStack in a single snap package! MicroStack is an upstream multi-node OpenStack deployment which can run directly on your workstation. Although made for developers, it is also suitable for edge, IoT and appliances. Do not wait anymore - grab MicroStack from the Snap Store and get your OpenStack running right away!
           </p>
           <p>
             <a class="p-link--external" href="https://tutorials.ubuntu.com/tutorial/microstack-get-started#0">Get started with MicroStack tutorial</a>
@@ -170,24 +177,50 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
             We recommend you use Ubuntu. On Mac or Windows, you can use <a class="p-link--external" href="https://multipass.run">Multipass</a> to give yourself Ubuntu VMs on demand. To install the <a class="p-link--external" href="https://snapcraft.io/microstack">MicroStack&nbsp;snap</a>:
           </p>
           <h3>Install MicroStack</h3>
+
           <div class="p-notification--information">
             <p class="p-notification__response">
               <span class="p-notification__status">Information:</span>
-              MicroStack requires at least 16 GB of RAM and a multi-core processor.
+              MicroStack requires at least 8 GB of RAM and a multi-core processor.
             </p>
           </div>
+
+          <h4>On Linux</h4>
+
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="sudo snap install microstack --classic --beta" value="sudo snap install microstack --classic --beta" readonly="readonly">
+            <input class="p-code-copyable__input" aria-label="sudo snap install microstack --classic --beta" value="sudo snap install microstack --classic --edge" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
+
           <p>
             Command <code>snap</code> not found? <a class="p-link--external" href="https://snapcraft.io/docs/core/install">Install snapd first</a>.
           </p>
-          <h3>Configure networks and OpenStack databases</h3>
+
+          <h4>On Windows and macOS</h4>
+
+          <p>
+            Install Multipass then start a multipass vm:
+          </p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="sudo microstack.init" value="sudo microstack.init" readonly="readonly">
+            <input class="p-code-copyable__input" value="multipass launch --name microkstack-vm --mem 8G --disk 40G<" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
+
+          <p>
+            Install the MicroStack snap on that multipass vm:
+          </p>
+          <div class="p-code-copyable u-sv3">
+            <input class="p-code-copyable__input" value="multipass exec microkstack-vm -- sudo snap install microstack --classic --edge" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+
+          <h3>Configure networks and OpenStack databases</h3>
+
+          <div class="p-code-copyable">
+            <input class="p-code-copyable__input" aria-label="sudo microstack.init" value="sudo microstack.init --auto" readonly="readonly">
+            <button class="p-code-copyable__action">Copy to clipboard</button>
+          </div>
+
           <p>
             That’s it! Your OpenStack is ready.
           </p>
@@ -205,7 +238,7 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
             Launch a VM
           </h3>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="microstack.launch test" value="microstack.launch test" readonly="readonly">
+            <input class="p-code-copyable__input" aria-label="microstack.launch test" value="microstack.launch cirros --name test" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
@@ -220,14 +253,14 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
             Snaps are published in <a class="p-link--external" href="https://snapcraft.io/docs/channels">channels</a> which are made up of a track (or major version), and an expected level of stability. Try <code>snap info microstack</code> to see what versions are currently published. You can run
           </p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="snap refresh --channel=latest/beta microstack" value="snap refresh --channel=latest/beta microstack" readonly="readonly">
+            <input class="p-code-copyable__input" aria-label="snap refresh --channel=latest/beta microstack" value="sudo snap refresh --channel=latest/beta microstack" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
             or
           </p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" aria-label="snap refresh --channel=1.11/stable microstack" value="snap refresh --channel=1.11/stable microstack" readonly="readonly">
+            <input class="p-code-copyable__input" aria-label="snap refresh --channel=1.11/stable microstack" value="sudo snap refresh --channel=1.11/stable microstack" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
@@ -239,4 +272,6 @@ description: "MicroStack is an upstream single-node OpenStack deployment which c
         </div>
       </div>
     </section>
+    <script src="/js/installversion.js" async></script>
+    <script src="/js/osselector.js" async></script>
   </main>
