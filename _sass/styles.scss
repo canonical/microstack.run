@@ -7,6 +7,10 @@
 // import additional styles
 @import "blockquote";
 @import "pattern_separator";
+@import "sidebar";
+@import "docs";
+
+@include docs;
 
 @include ubuntu-p-separator;
 

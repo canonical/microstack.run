@@ -1,13 +1,14 @@
 # microstack.io
-[![CircleCI build status](https://circleci.com/gh/canonical-web-and-design/microstack.io.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/microstack.io)
+[![CircleCI build
+status](https://circleci.com/gh/canonical-web-and-design/microstack.run.svg?style=shield)](https://circleci.com/gh/canonical-web-and-design/microstack.run)
 
-This is the repo for the [microstack.io website](https://microstack.io).
+This is the repo for the [microstack.run website](https://microstack.run).
 
 ## Usage
 
 After [installing Docker](https://docs.docker.com/install/):
 
-``` bash
+```bash
 ./run
 ```
 

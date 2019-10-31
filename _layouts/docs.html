@@ -1,0 +1,58 @@
+---
+layout: base
+---
+<div class="l-docs">
+  <aside class="l-docs-sidebar" id="navigation">
+    <div class="p-sidebar__banner u-hide--medium u-hide--large">
+      <i class="p-sidebar__toggle p-icon--menu"></i>
+    </div>
+    <div class="p-sidebar__content u-hide--small">
+      <!--
+            This navigation is edited manually.
+            Please update it whenever you add, remove or move a document,
+            and check and update it whenever you get the opportunity.
+          -->
+      <nav class="p-sidebar-nav">
+        <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
+          <li class="p-sidebar-nav__item">
+            <strong>Docs</strong>
+            <ul class="p-sidebar-nav__list" id="docs-list-unsorted">
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/">Installation and Quickstart</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/pro-tips">Pro tips</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/clustering">Clustering</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/juju">Using Juju</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/releases">OpenStack releases</a></li>
+              <li class="p-sidebar-nav__item"><a class="p-link--soft" href="/docs/docs-contrib">Help improve these docs</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <script>
+        // Toggle mobile sidebar nav
+        var toggle = document.querySelector('.p-sidebar__toggle');
+        var sidebarContent = document.querySelector('.p-sidebar__content');
+        toggle.addEventListener('click', function (e) {
+          toggle.classList.toggle('p-icon--menu');
+          toggle.classList.toggle('p-icon--close');
+          sidebarContent.classList.toggle('u-hide--small');
+        });
+        // Add active class to sidebar nav
+        var navLinks = document.querySelectorAll('.p-sidebar-nav__item > .p-link--soft');
+        navLinks.forEach(function (link) {
+          if (link.getAttribute("href") === window.location.pathname) {
+            link.className += " is-active";
+          }
+        });
+      </script>
+    </div>
+  </aside>
+
+  <main class="l-docs-content" id="main-content">
+    <div class="p-strip is-shallow">
+      <div class="l-docs-row">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+
+</div>
