@@ -8,16 +8,6 @@ title: "Pro tips"
 This page consists of a collection of tips and optional configurations that may
 improve your experience with MicroStack.
 
-## Launch a VM
-
-```bash
-microstack.launch cirros --name test
-```
-
-Your VM is up and running now. You should see a message like:
-
-Access your server with `ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3`
-
 ## Try a different version, or a beta, or a daily build
 
 Snaps are published in [channels](https://snapcraft.io/docs/channels) which are made up of a track (or major version), and an expected level of stability. Try          `snap info microstack` to see what versions are currently published. You can run:

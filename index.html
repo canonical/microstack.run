@@ -16,7 +16,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
           Install and run OpenStack on Linux in minutes. Made for developers and great for edge, IoT, and appliances.
         </p>
         <p>
-          <a class="p-button--positive is-inline" href="#get-started">Get started</a>&nbsp;&nbsp;for Linux, Windows or macOS
+          <a class="p-button--positive is-inline" href="#get-started">Get started</a><span style="padding-left: .5rem;">for Linux, Windows or macOS</span>
         </p>
       </div>
       <div class="col-4 u-align--center u-hide--small">
@@ -156,7 +156,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
       <a id="tab-one" href="#tab-one__content"
         class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
         <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-        <h4 class="p-heading--five p-tab__title">Linux</h4>
+        <p class="p-heading--four" class="p-heading--five p-tab__title">Linux</p>
       </a>
 
       <a id="tab-two" href="#tab-two__content"
@@ -174,16 +174,33 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
       <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
         <ol class="p-stepped-list u-no-margin--left">
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install the microkstack snap</h3>
+            <h3 class="p-stepped-list__title">Install the microstack snap</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="sudo snap install microstack --classic --edge" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo snap install microstack --classic --edge" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
 
             <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a
                 href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
+          </li>
+          <li class="p-stepped-list__item">
+            <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
+
+            <div class="p-code-copyable u-stepped-list-margin">
+              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <button class="p-code-copyable__action">Copy to clipboard</button>
+            </div>
+          </li>
+          <li class="p-stepped-list__item">
+            <h3 class="p-stepped-list__title">Launch a VM</h3>
+
+            <div class="p-code-copyable u-stepped-list-margin">
+              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <button class="p-code-copyable__action">Copy to clipboard</button>
+            </div>
+            <p>Your VM is up and running now. You should see a message like:</p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
@@ -203,26 +220,21 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
             </p>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Start a multipass vm</h3>
+            <h3 class="p-stepped-list__title">Start a multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="multipass launch --name microkstack-vm --mem 8G --disk 40G" readonly="readonly">
+              <input class="p-code-copyable__input" value="multipass launch --name microstack-vm --mem 8G --disk 40G" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install the MicroStack snap on that multipass vm</h3>
+            <h3 class="p-stepped-list__title">Install the MicroStack snap on that multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="multipass exec microkstack-vm -- sudo snap install microstack --classic --edge"
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --classic --edge"
                 readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
-
-            <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a
-                href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
           </li>
           <li class="p-stepped-list__item">
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
@@ -232,6 +244,16 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
                 value="sudo microstack.init --auto" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
+          </li>
+          <li class="p-stepped-list__item">
+            <h3 class="p-stepped-list__title">Launch a VM</h3>
+
+            <div class="p-code-copyable u-stepped-list-margin">
+              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <button class="p-code-copyable__action">Copy to clipboard</button>
+            </div>
+            <p>Your VM is up and running now. You should see a message like:</p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
@@ -251,35 +273,39 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
             </p>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Start a multipass vm</h3>
+            <h3 class="p-stepped-list__title">Start a multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="multipass launch --name microkstack-vm --mem 8G --disk 40G" readonly="readonly">
+              <input class="p-code-copyable__input" value="multipass launch --name microstack-vm --mem 8G --disk 40G" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install the MicroStack snap on that multipass vm</h3>
+            <h3 class="p-stepped-list__title">Install the MicroStack snap on that multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="multipass exec microkstack-vm -- sudo snap install microstack --classic --edge"
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --classic --edge"
                 readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
-
-            <p class="p-stepped-list__content u-stepped-list-margin">Don’t have the <code>snap</code> command? <a
-                href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Get set up for snaps.</a></p>
           </li>
           <li class="p-stepped-list__item">
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" aria-label="sudo snap install microk8s --classic"
-                value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
+          </li>
+          <li class="p-stepped-list__item">
+            <h3 class="p-stepped-list__title">Launch a VM</h3>
+
+            <div class="p-code-copyable u-stepped-list-margin">
+              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <button class="p-code-copyable__action">Copy to clipboard</button>
+            </div>
+            <p>Your VM is up and running now. You should see a message like:</p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
