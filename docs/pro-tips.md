@@ -8,6 +8,22 @@ title: "Pro tips"
 This page consists of a collection of tips and optional configurations that may
 improve your experience with MicroStack.
 
+## Try a different version, or a beta, or a daily build
+
+Snaps are published in [channels](https://snapcraft.io/docs/channels) which are made up of a track (or major version), and an expected level of stability. Try          `snap info microstack` to see what versions are currently published. You can run:
+
+```bash
+sudo snap refresh --channel=latest/beta microstack
+```
+
+or
+
+```bash
+sudo snap refresh --channel=1.11/stable microstack
+```
+
+to get the required version.
+
 ## Kernel tweaks
 
 OpenStack can potentially run a lot of processes and open a lot of network
