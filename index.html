@@ -241,7 +241,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
 
             <div class="p-code-copyable u-stepped-list-margin">
               <input class="p-code-copyable__input"
-                value="sudo microstack.init --auto" readonly="readonly">
+                value="multipass exec microstack-vm -- sudo microstack.init --auto" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -249,7 +249,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo -E microstack.launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
@@ -293,7 +293,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo microstack.init --auto" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -301,7 +301,7 @@ Although made for developers, it is also suitable for edge, IoT and appliances."
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo -E microstack.launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
