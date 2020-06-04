@@ -1,6 +1,8 @@
 {
   "scripts": {
+    "start": "yarn run build && yarn run serve",
     "lint-scss": "stylelint _sass/**/*.scss",
+    "lint-nginx": "gixy nginx.conf",
     "build": "yarn run build-css && yarn run build-js && yarn run build-jekyll",
     "build-jekyll": "bundle exec jekyll build",
     "build-css": "node-sass --include-path node_modules _sass --source-map true --output-style compressed --output css && postcss --use autoprefixer --replace css/**/*.css --no-map",
