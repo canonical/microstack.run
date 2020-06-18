@@ -13,3 +13,6 @@ After [installing Docker](https://docs.docker.com/install/):
 ```
 
 And browse to http://127.0.0.1:8039.
+
+# Deploy
+You can find the deployment config in the deploy folder.
