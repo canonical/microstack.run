@@ -55,8 +55,8 @@ microstack.openstack <command>
 <div class="p-notification--information">
   <p class="p-notification__response">
     <span class="p-notification__status">Note:</span>
-    At time of writing, MicroStack has been assured to run bug-free only on
-    Ubuntu 18.04 LTS.
+    MicroStack is designed to run on a physical machine running Ubuntu 18.04
+    LTS.
   </p>
 </div>
 
