@@ -6,10 +6,10 @@ This is the repo for the [microstack.run website](https://microstack.run).
 
 ## Usage
 
-After [installing Docker](https://docs.docker.com/install/):
+The simplest way to run the site locally is with the [dotrun snap](https://snapcraft.io/dotrun):
 
 ```bash
-./run
+dotrun
 ```
 
 And browse to http://127.0.0.1:8039.
