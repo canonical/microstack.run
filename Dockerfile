@@ -44,7 +44,6 @@ RUN apt-get update && apt-get install --no-install-recommends --yes nginx
 
 # Import code, build assets and mirror list
 COPY --from=build-site srv/_site .
-COPY js js
 
 ARG BUILD_ID
 ADD nginx.conf /etc/nginx/sites-enabled/default
