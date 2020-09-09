@@ -6,10 +6,10 @@ This is the repo for the [microstack.run website](https://microstack.run).
 
 ## Usage
 
-After [installing Docker](https://docs.docker.com/install/):
+The easiest way to run this project is
 
 ```bash
-./run
+dotrun
 ```
 
 And browse to http://127.0.0.1:8039.

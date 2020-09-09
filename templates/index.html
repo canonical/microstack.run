@@ -1,9 +1,15 @@
----
-layout: base
-title: "MicroStack - OpenStack in a snap"
-description: "MicroStack is an upstream multi-node OpenStack deployment which can run directly on your workstation. Although made for developers, it is also suitable for edge, IoT and appliances."
-meta_copydoc: "https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/edit"
----
+{% extends 'base_layout.html' %}
+{% block title %}MicroStack - OpenStack in a snap{% endblock %}
+
+{% block description %}
+MicroStack is an upstream multi-node OpenStack deployment which can run directly on your workstation. Although made for developers, it is also suitable for edge, IoT and appliances.
+{% endblock %}
+
+{% block meta_copydoc %}
+https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/edit
+{% endblock %}
+
+{% block content %}
 <main id="main-content">
 
   <section class="p-strip--header is-dark">
@@ -319,4 +325,5 @@ meta_copydoc: "https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_
   </section>
 </main>
 
-<script defer src="/js/tabs.js"></script>
+<script defer src="/static/js/tabs.js"></script>
+{% endblock %}
