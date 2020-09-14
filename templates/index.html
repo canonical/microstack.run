@@ -10,6 +10,9 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
 {% endblock %}
 
 {% block content %}
+<script defer src="{{ versioned_static('js/copy-to-clipboard.js') }}"></script>
+<script defer src="{{ versioned_static('js/osselector.js') }}"></script>
+
 <main id="main-content">
 
   <section class="p-strip--header is-dark">
@@ -150,7 +153,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
     </div>
   </section>
 
-  <section class="p-strip is-bordered" id="get-started" role="tablist">
+  <section class="p-strip" id="get-started" role="tablist">
     <div class="u-fixed-width">
       <h2>Get started with MicroStack</h2>
       <div class="p-notification--information">
@@ -325,5 +328,6 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
   </section>
 </main>
 
-<script defer src="/static/js/tabs.js"></script>
+<script defer src="{{ versioned_static('js/tabs.js') }}"></script>
+
 {% endblock %}

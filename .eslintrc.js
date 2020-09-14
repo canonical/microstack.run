@@ -1,6 +1,7 @@
 module.exports = {
     parser: "babel-eslint",
     globals: {},
+    plugins: ["jest"],
     env: {
         browser: true,
         es6: true,
