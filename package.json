@@ -1,28 +1,42 @@
 {
   "scripts": {
-    "start": "yarn run build && yarn run serve",
-    "lint-scss": "stylelint _sass/**/*.scss",
-    "lint-nginx": "gixy nginx.conf",
-    "build": "yarn run build-css && yarn run build-js && yarn run build-jekyll",
-    "build-jekyll": "bundle exec jekyll build",
-    "build-css": "node-sass --include-path node_modules _sass --source-map true --output-style compressed --output css && postcss --use autoprefixer --replace css/**/*.css --no-map",
-    "build-js": "mkdir -p js/build/global-nav && cp node_modules/@canonical/global-nav/dist/global-nav.js js/build/global-nav",
-    "watch": "watch -p '_sass/**/*.scss' -c 'yarn run build'",
-    "serve": "bundle exec jekyll serve -P ${PORT} -H 0.0.0.0",
-    "test": "yarn run lint-scss",
-    "clean": "rm -rf node_modules yarn-error.log css js *.log *.sqlite _site/ build/ .jekyll-metadata .bundle"
+    "clean": "rm -rf node_modules yarn-error.log css static/css *.log *.sqlite _site/ build/",
+    "watch": "watch -p 'static/sass/**/*' -p 'static/js/**/*.js' -c 'yarn run build'",
+    "watch-js": "webpack --watch",
+    "watch-scss": "watch -p 'static/sass/**/*.scss' -c 'yarn run build-scss'",
+    "build": "yarn run build-css && yarn run build-js",
+    "build-css": "node-sass --include-path node_modules static/sass --source-map true --output-style compressed --output static/css && postcss --map false --use autoprefixer --replace 'static/css/**/*.css'",
+    "build-js": "yarn run webpack",
+    "format-python": "black --line-length 79 webapp",
+    "lint-python": "flake8 webapp tests && black --check --line-length 79 webapp tests",
+    "lint-js": "eslint static/js",
+    "lint-scss": "stylelint static/**/*.scss",
+    "serve": "./entrypoint 0.0.0.0:${PORT}",
+    "start": "yarn run build && concurrently --raw 'yarn run watch' 'yarn run serve'",
+    "test": "yarn run lint-scss && yarn run lint-python && yarn run test-python",
+    "test-python": "python3 -m unittest discover tests",
+    "test-js": "jest"
   },
   "dependencies": {
     "@canonical/global-nav": "2.4.3",
     "autoprefixer": "9.8.6",
     "node-sass": "4.14.1",
-    "postcss-cli": "7.1.2",
-    "vanilla-framework": "2.17.0",
-    "watch-cli": "0.2.3"
+    "vanilla-framework": "2.17.0"
   },
   "devDependencies": {
+    "@babel/core": "7.11.1",
+    "@babel/preset-env": "7.11.0",
+    "babel-loader": "8.1.0",
+    "jest": "26.4.2",
+    "postcss-cli": "7.1.2",
+    "watch-cli": "0.2.3",
+    "concurrently": "5.1.0",
+    "prettier": "2.0.2",
     "stylelint": "13.7.0",
     "stylelint-config-standard": "20.0.0",
-    "stylelint-order": "4.1.0"
+    "stylelint-order": "4.1.0",
+    "terser-webpack-plugin": "2.3.5",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12"
   }
 }
