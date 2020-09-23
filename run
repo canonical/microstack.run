@@ -608,4 +608,5 @@ case $run_command in
         fi
     ;;
     *) invalid "Command '${run_command}' not recognised." ;;
+
 esac
