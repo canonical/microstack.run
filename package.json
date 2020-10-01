@@ -25,19 +25,19 @@
     "vanilla-framework": "2.19.0"
   },
   "devDependencies": {
-    "@babel/core": "7.11.1",
-    "@babel/preset-env": "7.11.0",
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
     "babel-loader": "8.1.0",
-    "concurrently": "5.1.0",
+    "concurrently": "5.3.0",
     "jest": "26.4.2",
     "postcss-cli": "8.0.0",
-    "prettier": "2.0.2",
-    "stylelint": "13.7.0",
+    "prettier": "2.1.2",
+    "stylelint": "13.7.2",
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
     "terser-webpack-plugin": "4.2.2",
     "watch-cli": "0.2.3",
-    "webpack": "4.43.0",
+    "webpack": "4.44.2",
     "webpack-cli": "3.3.12"
   }
 }
