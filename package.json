@@ -18,7 +18,7 @@
     "test-js": "jest"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.0.2",
+    "@canonical/cookie-policy": "3.0.3",
     "@canonical/global-nav": "2.4.3",
     "autoprefixer": "10.0.1",
     "node-sass": "4.14.1",
