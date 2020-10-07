@@ -4,6 +4,9 @@
 // Import Vanilla
 @import 'vanilla-framework/scss/build';
 
+// import cookie policy
+@import "@canonical/cookie-policy/build/css/cookie-policy";
+
 // import additional styles
 @import "blockquote";
 @import "pattern_separator";
