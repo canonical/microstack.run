@@ -59,13 +59,13 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
       </div>
       <div class="col-4">
         <ul class="p-list--divided u-no-margin--bottom__medium">
-          <li class="p-list__item is-ticked">Neutron with OVS</li>
-          <li class="p-list__item is-ticked">Dashboard</li>
-          <li class="p-list__item is-ticked last-item">Metrics</li>
+          <li class="p-list__item is-ticked">Placement</li>
+          <li class="p-list__item is-ticked">Neutron with OVN</li>
+          <li class="p-list__item is-ticked">Cinder</li>
       </div>
       <div class="col-4">
         <ul class="p-list--divided">
-          <li class="p-list__item is-ticked">GPGPU bindings</li>
+          <li class="p-list__item is-ticked">Dashboard</li>
           <li class="p-list__item is-ticked">Clustering <small class="p-label--in-progress">BETA</small></li>
         </ul>
       </div>
@@ -200,7 +200,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -208,7 +208,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
@@ -253,7 +253,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
 
             <div class="p-code-copyable u-stepped-list-margin">
               <input class="p-code-copyable__input"
-                value="sudo microstack.init --auto" readonly="readonly">
+                value="sudo microstack.init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -261,7 +261,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
@@ -305,7 +305,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -313,7 +313,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>

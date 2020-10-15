@@ -46,24 +46,26 @@ description: "How to install, run and configure microstack."
           To quickly configure networks and launch a vm, run
         </p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="sudo microstack.init" readonly="readonly">
+          <input class="p-code-copyable__input" value="sudo microstack init" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
         <p>
           This will configure various Openstack databases. Then run:
         </p>
         <div class="p-code-copyable">
-          <input class="p-code-copyable__input" value="microstack.launch" readonly="readonly">
+          <input class="p-code-copyable__input" value="microstack launch" readonly="readonly">
           <button class="p-code-copyable__action">Copy to clipboard</button>
         </div>
         <p>
           This will launch an instance for you, and make it available to manage via the command line, or via the Horizon Dashboard.
         </p>
+        <p>In order to get a password for the admin user in Keystone use the following command:</p>
+        <pre><code>$ sudo snap get microstack config.credentials.keystone-password</code></pre>
         <p>
-          To access the Dashboard, visit <a href="http://10.20.20.1">10.20.20.1</a>in a web browser, and login with the following credentials:
+          To access the Dashboard, visit <a href="http://localhost">localhost</a>in a web browser, and login with the following credentials:
         </p>
         <pre><code>username: admin
-password: keystone</code></pre>
+password: <keystone-admin-password></code></pre>
           <p>
             To ssh into the instance, use the username &quot;cirros&quot; and the ssh key written to <code>~/.ssh/id_microstack</code>:
           </p>
@@ -75,7 +77,7 @@ password: keystone</code></pre>
             Where 'IP' is listed in the output of:
           </p>
           <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="microstack.launch" readonly="readonly">
+            <input class="p-code-copyable__input" value="microstack launch" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
           <p>
@@ -102,19 +104,13 @@ password: keystone</code></pre>
             <input class="p-code-copyable__input" value="microstack.openstack server list" readonly="readonly">
             <button class="p-code-copyable__action">Copy to clipboard</button>
           </div>
-          <p>
-            You can setup this command as an alias for <code>openstack</code> if you wish (removing the need for the <code>microstack.</code> prefix):
-          </p>
-          <div class="p-code-copyable">
-            <input class="p-code-copyable__input" value="sudo snap alias microstack.openstack openstack" readonly="readonly">
-            <button class="p-code-copyable__action">Copy to clipboard</button>
-          </div>
-          <p>
-            Alternatively you can access the Horizon OpenStack dashboard on <code>http://127.0.0.1</code> with the following credentials:
-          </p>
-          <pre><code>username: admin
-password: keystone</code></pre>
-          </div>
+        <p>In order to get a password for the admin user in Keystone use the following command:</p>
+        <pre><code>$ sudo snap get microstack config.credentials.keystone-password</code></pre>
+        <p>
+          To access the Dashboard, visit <a href="http://localhost">localhost</a>in a web browser, and login with the following credentials:
+        </p>
+        <pre><code>username: admin
+password: <keystone-admin-password></code></pre>
         </div>
         <div class="u-fixed-width">
           <hr class="p-separator" />
