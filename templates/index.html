@@ -187,10 +187,10 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
       <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
         <ol class="p-stepped-list u-no-margin--left">
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install the MicroStack snap</h3>
+            <h3 class="p-stepped-list__title">Install the microstack snap</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo snap install microstack --edge --devmode" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo snap install microstack --beta --devmode" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
 
@@ -201,7 +201,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -209,11 +209,11 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
@@ -244,7 +244,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Install the MicroStack snap on that Multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --classic --edge"
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --beta --devmode"
                 readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
@@ -254,7 +254,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
 
             <div class="p-code-copyable u-stepped-list-margin">
               <input class="p-code-copyable__input"
-                value="sudo microstack.init --auto" readonly="readonly">
+                value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -262,11 +262,11 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
@@ -297,7 +297,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Install the MicroStack snap on that Multipass VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --classic --edge"
+              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --beta --devmode"
                 readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
@@ -306,7 +306,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack.init --auto" readonly="readonly">
+              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
           </li>
@@ -314,11 +314,11 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             <h3 class="p-stepped-list__title">Launch a VM</h3>
 
             <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack.launch cirros --name test" readonly="readonly">
+              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
             </div>
             <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/.ssh/id_microstack cirros@10.20.20.3</code></p>
+            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
