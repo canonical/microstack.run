@@ -1,17 +1,7 @@
 /* eslint-env node */
 
-const TerserPlugin = require("terser-webpack-plugin");
-
 const production = process.env.ENVIRONMENT !== "devel";
 
-// turn on terser plugin on production
-const minimizer = production
-  ? [
-      new TerserPlugin({
-        sourceMap: true,
-      }),
-    ]
-  : [];
 
 module.exports = {
   entry: {
@@ -48,6 +38,5 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    minimizer,
   },
 };
