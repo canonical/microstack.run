@@ -1,6 +1,8 @@
 name: docs links on microstack.run
 
-on: pull_request
+on:
+  schedule:
+    - cron: "20 7 * * *"
 
 jobs:
   check-links:
