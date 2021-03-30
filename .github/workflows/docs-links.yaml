@@ -15,7 +15,7 @@ jobs:
         run: sudo apt update && sudo apt install linkchecker
 
       - name: Run linkchecker
-        run: linkchecker --threads 2 --ignore-url "https://www.gstatic.com" --ignore-url "https://assets.ubuntu.com" --check-extern --no-warnings https://microstack.run/docs
+        run: linkchecker --threads 2 --ignore-url "https://www.gstatic.com" --ignore-url "https://assets.ubuntu.com$" --check-extern --no-warnings https://microstack.run/docs
 
       - name: Send message on failure
         if: failure()
