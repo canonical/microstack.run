@@ -3,9 +3,9 @@ import talisker
 # Packages
 from canonicalwebteam.flask_base.app import FlaskBase
 from flask import render_template
-from canonicalwebteam.discourse_docs import (
+from canonicalwebteam.discourse import (
     DiscourseAPI,
-    DiscourseDocs,
+    Docs,
     DocParser,
 )
 
@@ -29,7 +29,7 @@ doc_parser = DocParser(
 if app.debug:
     doc_parser.api.session.adapters["https://"].timeout = 99
 
-discourse_docs = DiscourseDocs(
+discourse_docs = Docs(
     parser=doc_parser,
     document_template="docs/document.html",
     url_prefix="/docs",
