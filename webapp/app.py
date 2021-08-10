@@ -1,8 +1,8 @@
+import flask
 import talisker
 
 # Packages
 from canonicalwebteam.flask_base.app import FlaskBase
-from flask import render_template
 from canonicalwebteam.discourse import (
     DiscourseAPI,
     Docs,
@@ -39,4 +39,22 @@ discourse_docs.init_app(app)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return flask.render_template("index.html")
+
+
+@app.route("/sitemap.xml")
+def sitemap_index():
+    xml_sitemap = flask.render_template("sitemap/sitemap-index.xml")
+    response = flask.make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
+
+
+@app.route("/sitemap-links.xml")
+def sitemap_links():
+    xml_sitemap = flask.render_template("sitemap/sitemap-links.xml")
+    response = flask.make_response(xml_sitemap)
+    response.headers["Content-Type"] = "application/xml"
+
+    return response
