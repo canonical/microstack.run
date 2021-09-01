@@ -23,7 +23,7 @@
     "autoprefixer": "10.2.1",
     "sass": "1.27.0",
     "postcss": "8.2.10",
-    "vanilla-framework": "2.33.1"
+    "vanilla-framework": "2.34.0"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
