@@ -2,12 +2,10 @@
 {% block title %}OpenStack for the edge, micro clouds and developers{% endblock %}
 
 {% block description %}
-MicroStack is a micro cloud solution based on OpenStack, designed for the edge and small-scale private cloud deployments, that can be installed and maintained with a minimal effort.
+MicroStack is a pure upstream OpenStack platform, designed for the edge and small-scale private cloud deployments, that can be installed and maintained with a minimal effort.
 {% endblock %}
 
-{% block meta_copydoc %}
-https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/edit
-{% endblock %}
+{% block meta_copydoc %}https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/edit{% endblock %}
 
 {% block content %}
 <script defer src="{{ versioned_static('js/copy-to-clipboard.js') }}"></script>
@@ -308,7 +306,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Configure networks and OpenStack databases</h3>
+            <h3 class="p-stepped-list__title">Set up MicroStack</h3>
             <div class="p-code-copyable u-stepped-list-margin">
               <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
               <button class="p-code-copyable__action">Copy to clipboard</button>
@@ -334,7 +332,7 @@ https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/
     <div class="row u-vertically-center">
       <div class="col-6">
         <h2>The team behind MicroStack</h2>
-        <p>MicroStack is maintained by the <a class="p-link--external" href="https://ubuntu.com/openstack">OpenStack team at Canonical</a>. We provide OpenStack packages on Ubuntu and have two OpenStack distributions of our own. MicroStack is an on-rails, opinionated OpenStack for the edge, micro clouds and developers. <a class="p-link--external" href="https://ubuntu.com/openstack/features">Charmed OpenStack</a> is a composable enterprise OpenStack for large scale deployments in data centres. MicroStack was built by the dedicated OpenStack team at Canonical for the developer community. We also make the Charmed OpenStack for multi-cloud scalable clusters. Please contact us if you have any questions. </p>
+        <p>MicroStack is maintained by the <a class="p-link--external" href="https://ubuntu.com/openstack">OpenStack team at Canonical</a>. We provide OpenStack packages on Ubuntu and have two OpenStack distributions of our own. MicroStack is an on-rails, opinionated OpenStack for the edge, micro clouds and developers. <a class="p-link--external" href="https://ubuntu.com/openstack/features">Charmed OpenStack</a> is a composable enterprise OpenStack for large scale deployments in data centres.</p>
       </div>
       <div class="col-5 u-hide--small u-align--center">
         <img src="https://assets.ubuntu.com/v1/60d9b81e-picto-canonical.svg" alt="Canonical" style="width : 160px; height:160px">
