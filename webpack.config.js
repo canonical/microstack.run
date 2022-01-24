@@ -7,7 +7,6 @@ module.exports = {
   entry: {
     "global-nav": "./static/js/global-nav.js",
     "cookie-policy": "./static/js/cookie-policy.js",
-    copyToClipboard: "./static/js/copy-to-clipboard.js",
     installVersion: "./static/js/installversion.js",
     osSelector: "./static/js/osselector.js",
     tabs: "./static/js/tabs.js",
@@ -33,7 +32,7 @@ module.exports = {
             presets: ["@babel/preset-env"],
           },
         },
-      }
+      },
     ],
   },
   optimization: {
