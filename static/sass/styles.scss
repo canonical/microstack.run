@@ -92,12 +92,6 @@
   }
 }
 
-.u-no-margin--bottom__medium {
-  @media (max-width: $breakpoint-large -1) {
-    margin-bottom: 0;
-  }
-}
-
 .p-matrix:nth-of-type(1) .p-matrix__item {
   @media (max-width: $breakpoint-large -1) {
     border-top: 0;
