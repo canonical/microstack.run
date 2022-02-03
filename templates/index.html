@@ -8,7 +8,7 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
 {% block meta_copydoc %}https://docs.google.com/document/d/1-QO5zAclj469qGvFmNJBjQ_qqI_T_uliwj6mAo8ZbCs/edit{% endblock %}
 
 {% block content %}
-<script defer src="{{ versioned_static('js/copy-to-clipboard.js') }}"></script>
+
 <script defer src="{{ versioned_static('js/osselector.js') }}"></script>
 
 <main id="main-content">
@@ -21,16 +21,18 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
           <a class="p-button--positive" href="#get-started">Try MicroStack</a> &nbsp;and break the ice with OpenStack today
         </p>
       </div>
-      <div class="col-5 u-align--center u-hide--small u-embedded-media">
+      <div class="col-5 u-align--center u-hide--small u-hide--medium u-embedded-media">
         <iframe class="u-embedded-media__element" width="560" height="315" src="https://www.youtube.com/embed/fNk7AfxNggc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
   </section>
   <section class="p-strip">
     <div class="row">
       <div class="p-notification--caution">
-        <p class="p-notification__response">
-          <strong>Note:</strong> MicroStack is in a beta state. We encourage you to test it, give us your <a class="p-link--external" href="https://bugs.launchpad.net/microstack">feedback</a> and <a class="p-link--external" href="https://discourse.juju.is/search?q=microstack">ask questions</a>. For information about commercial support for MicroStack, <a class="p-link--external" href="https://ubuntu.com/openstack/contact-us">contact Canonical</a>.
-        </p>
+        <div class="p-notification__content">
+          <p class="p-notification__message">
+            <strong>Note:</strong> MicroStack is in a beta state. We encourage you to test it, give us your <a href="https://bugs.launchpad.net/microstack">feedback</a> and <a href="https://discourse.juju.is/search?q=microstack">ask questions</a>. For information about commercial support for MicroStack, <a href="https://ubuntu.com/openstack/contact-us">contact Canonical</a>.
+          </p>
+        </div>
       </div>
     </div>
     <div class="row">
@@ -40,7 +42,7 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
       </div>
       <div class="row-cli__commands">$ sudo<span class="row-cli__commands-list typer" id="main" data-words="snap install microstack --beta --devmode,microstack init --auto --control" data-delay="50" data-deleteDelay="5000" data-colors="#111111"></span></div>
       <p>
-        <a class="p-link--external" href="https://ubuntu.com/openstack/tutorials">MicroStack tutorial</a>
+        <a href="https://ubuntu.com/openstack/tutorials">MicroStack tutorial</a>
       </p>
     </div>
   </section>
@@ -65,17 +67,17 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
           <p>MicroStack answers the needs of edge computing, providing a secure, reliable and scalable cloud platform with minimal footprint and simplified lifecycle management capabilities.</p>
           <p>All to meet the requirements of the most demanding applications in telecom, industrial, automotive and other market sectors that need edge infrastructure.</p>
           <p>
-            <a href="https://ubuntu.com/blog/edge-computing-is-dead-long-live-micro-clouds-and-iot-gateways" class="p-link--external">Read a blog about Canonical's edge strategy</a>
+            <a href="https://ubuntu.com/blog/edge-computing-is-dead-long-live-micro-clouds-and-iot-gateways" >Read a blog about Canonical's edge strategy</a>
           </p>
         </div>
-        <div class="col-6 u-align--center u-vertically-center">
-          <img src="https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg" class="u-hide--small" style="height: 225px; width: 394px;" alt="openstack cloud outlines">
+        <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
+          <img src="https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg" style="height: 225px; width: 394px;" alt="">
         </div>
         <hr class="p-separator" />
       </div>
       <div class="row">
-        <div class="col-6 u-align--center u-vertically-center">
-          <img src="https://assets.ubuntu.com/v1/e2bf84de-edge-cluster.svg" class="u-hide--small" style="height: 225px; width: 234px;" alt="openstack cloud white">
+        <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
+          <img src="https://assets.ubuntu.com/v1/e2bf84de-edge-cluster.svg" style="height: 225px; width: 234px;" alt="">
         </div>
         <div class="col-6">
           <h2>OpenStack for micro clouds</h2>
@@ -83,7 +85,7 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
           <p>OpenStack private cloud implementation used to be challenging due to the complexity of OpenStack and its scale. This is no longer the case.</p>
           <p>MicroStack enables enterprises to quickly deploy cost-efficient private cloud infrastructure from single-node installations to micro cloud clusters.</p>
           <p>
-            <a href="https://ubuntu.com/openstack/features" class="p-link--external">For large-scale deployments try Charmed OpenStack</a>
+            <a href="https://ubuntu.com/openstack/features" >For large-scale deployments try Charmed OpenStack</a>
           </p>
         </div>
         <hr class="p-separator" />
@@ -95,11 +97,11 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
           <p>Designed for devices with minimal hardware resources, MicroStack is perfectly suitable for developer workstations and CI/CD environments.</p>
           <p>If you are using OpenStack in production, MicroStack effectively connects the dots between your cloud operations team and developers. </p>
           <p>
-            <a href="https://www.openstack.org/videos/summits/virtual/OpenStack-on-rails-meet-MicroStack" class="p-link--external">Watch MicroStack in action</a>
+            <a href="https://www.openstack.org/videos/summits/virtual/OpenStack-on-rails-meet-MicroStack" >Watch MicroStack in action</a>
           </p>
         </div>
-        <div class="col-6 u-align--center u-vertically-center">
-          <img src="https://assets.ubuntu.com/v1/d1782e3a-dev-at-laptop.svg" class="u-hide--small" style="height: 225px; width: 208px;" alt="dev at laptop">
+        <div class="col-6 u-hide--small u-hide--medium u-align--center u-vertically-center">
+          <img src="https://assets.ubuntu.com/v1/d1782e3a-dev-at-laptop.svg" style="height: 225px; width: 208px;" alt="">
         </div>
       </div>
   </section>
@@ -109,7 +111,7 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
         <h2>Share your use case</h2>
         <p>Web applications, AI/ML or maybe telco NFV? What are you using MicroStack for? Do not hesitate and share your use case, and benefit from the community collaboration and help.</p>
         <p>
-          <a href="https://discourse.charmhub.io/search?q=microstack" class="p-link--external" style="color:#fff">Share your use case</a>  
+          <a href="https://discourse.charmhub.io/search?q=microstack"  style="color:#fff">Share your use case&nbsp;&rsaquo;</a>  
         </p>
       </div>
     </div>
@@ -117,7 +119,7 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
   <section class="p-strip is-deep">
     <div class="row">
       <div class="col-6">
-        <h2 class="u-sv3">Open source cloud</h2>
+        <h2 class="u-sv2">Open source cloud</h2>
         <p>MicroStack is a pure upstream OpenStack distribution which effectively decreases virtualisation costs. It is a reasonable alternative to VMware clusters, Microsoft Hyper-V, Citrix Hypervisor and Proxmox Virtualization Environment.</p>
       </div>
     </div>
@@ -126,13 +128,13 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
         <h3>OpenStack community project</h3>
         <hr class="u-sv1">
         <p>MicroStack is an Openstack community project with optional commercial support available from Canonical. It benefits from the 10 year maturity of OpenStack, its stability and community collaboration.</p>
-        <p><a href="https://discourse.charmhub.io/search?q=microstack" class="p-link--external">Join the community</a></p>
+        <p><a href="https://discourse.charmhub.io/search?q=microstack" >Join the community</a></p>
       </div>
       <div class="col-6 p-card">
         <h3>All-in one OpenStack</h3>
         <hr class="u-sv1">
         <p>MicroStack is an OpenStack in a snap. This means that all OpenStack components and their dependencies are packaged together inside of a single image that runs in isolation, ensuring high-level security.</p>
-        <p><a href="https://snapcraft.io/microstack" class="p-link--external">Learn more about snaps</a></p>
+        <p><a href="https://snapcraft.io/microstack" >Learn more about snaps</a></p>
       </div>
       <div class="col-6 p-card">
         <h3>Single-node OpenStack</h3>
@@ -157,20 +159,20 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
        </div>
     </div>  
     <div class="row u-equal-height">
-      <div class="col-3">
-        <ul class="p-list u-no-margin--bottom__medium">
+      <div class="col-3 col-medium-2">
+        <ul class="p-list u-no-margin--bottom">
           <li class="p-list__item is-ticked" style="border-bottom: 0">Keystone</li>
           <li class="p-list__item is-ticked">Horizon</li>
           <li class="p-list__item is-ticked last-item">Glance</li>
         </ul>
       </div>
-      <div class="col-3">
-        <ul class="p-list u-no-margin--bottom__medium">
+      <div class="col-3 col-medium-2">
+        <ul class="p-list u-no-margin--bottom">
           <li class="p-list__item is-ticked">Nova</li>
           <li class="p-list__item is-ticked">Neutron</li>
           <li class="p-list__item is-ticked last-item">Cinder</li>
       </div>
-      <div class="col-3">
+      <div class="col-3 col-medium-2">
         <ul class="p-list">
           <li class="p-list__item is-ticked">KVM</li>
           <li class="p-list__item is-ticked">OVN</li>
@@ -183,13 +185,15 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
     <div class="u-fixed-width">
       <h2>Try MicroStack</h2>
       <div class="p-notification--information">
-        <p class="p-notification__response">
-          MicroStack requires at least a multi-core CPU, 8 GB of RAM and 100 GB of storage.
-        </p>
+        <div class="p-notification__content">
+          <p class="p-notification__message">
+            MicroStack requires at least a multi-core CPU, 8 GB of RAM and 100 GB of storage.
+          </p>
+        </div>
       </div>
       <h3>What OS are you on?</h3>
     </div>
-    <div class="row u-equal-height u-sv3">
+    <div class="row u-equal-height u-sv2">
       <a id="tab-one" href="#tab-one__content"
         class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
         <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
@@ -207,39 +211,44 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
     <div class="row">
       <div class="col-6 js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
         <ol class="p-stepped-list u-no-margin--left">
+
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo snap install microstack --beta --devmode" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
-            </div>
-            <p class="p-stepped-list__content u-stepped-list-margin"><code>snap</code> command not found? <a href="https://docs.snapcraft.io/installing-snapd" class="p-link--external">Install snapd</a>.</p>
-          </li>
-          <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Set up MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>sudo snap install microstack --beta --devmode</code></pre>
+              </div>
+              <p><code>snap</code> command not found? <a href="https://docs.snapcraft.io/installing-snapd">Install snapd</a>.</p>
             </div>
           </li>
+
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Launch a VM</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Set up MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>sudo microstack init --auto --control</code></pre>
+              </div>
             </div>
-            <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
+          </li>
+          <li class="p-stepped-list__item">
+            <h3 class="p-stepped-list__title u-sv2">Launch a VM</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>microstack launch cirros --name test</code></pre>
+              </div>
+              <p>Your VM is up and running now. You should see a message like:</p>
+              <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
+            </div>
           </li>
         </ol>
         <p>
-          That’s it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials" class="p-link--external">MicroStack tutorials</a>.
+          That's it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials" >MicroStack tutorials</a>.
         </p>
       </div>
       <div class="col-9 js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
         <ol class="p-stepped-list u-no-margin--left">
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install Multipass</h3>
+            <h3 class="p-stepped-list__title u-sv2">Install Multipass</h3>
             <p class="p-stepped-list__content u-stepped-list-margin">
               <a href="https://multipass.run/download/windows" class="p-button--positive" data-os="win-win">
                 Download
@@ -247,83 +256,91 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
             </p>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Get a VM with Linux</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass launch --name microstack-vm --mem 8G --disk 100G" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Get a VM with Linux</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>multipass launch --name microstack-vm --mem 8G --disk 100G</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --beta --devmode" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>multipass exec microstack-vm -- sudo snap install microstack --beta --devmode</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Set up MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Set up MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>sudo microstack init --auto --control</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Launch a VM</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Launch a VM</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>microstack launch cirros --name test</code></pre>
+              </div>
+              <p>Your VM is up and running now. You should see a message like:</p>
+              <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
             </div>
-            <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
-          That’s it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials" class="p-link--external">MicroStack tutorials</a>.
+          That's it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials">MicroStack tutorials</a>.
         </p>
       </div>
       <div class="col-9 js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
         <ol class="p-stepped-list u-no-margin--left">
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install Multipass</h3>
-            <p class="p-stepped-list__content u-stepped-list-margin">
+            <h3 class="p-stepped-list__title u-sv2">Install Multipass</h3>
+            <p class="p-stepped-list__content ">
               <a href="https://multipass.run/download/macos" class="p-button--positive" data-os="mac">
                 Download
               </a>
             </p>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Get a VM with Linux</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass launch --name microstack-vm --mem 8G --disk 100G" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Get a VM with Linux</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>multipass launch --name microstack-vm --mem 8G --disk 100G</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Install MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="multipass exec microstack-vm -- sudo snap install microstack --beta --devmode" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>multipass exec microstack-vm -- sudo snap install microstack --beta --devmode</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Set up MicroStack</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="sudo microstack init --auto --control" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Set up MicroStack</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>sudo microstack init --auto --control</code></pre>
+              </div>
             </div>
           </li>
           <li class="p-stepped-list__item">
-            <h3 class="p-stepped-list__title">Launch a VM</h3>
-            <div class="p-code-copyable u-stepped-list-margin">
-              <input class="p-code-copyable__input" value="microstack launch cirros --name test" readonly="readonly">
-              <button class="p-code-copyable__action">Copy to clipboard</button>
+            <h3 class="p-stepped-list__title u-sv2">Launch a VM</h3>
+            <div class="p-stepped-list__content">
+              <div class="p-code-snippet">
+                <pre class="p-code-snippet__block--icon"><code>microstack launch cirros --name test</code></pre>
+              </div>
+              <p>Your VM is up and running now. You should see a message like:</p>
+              <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
             </div>
-            <p>Your VM is up and running now. You should see a message like:</p>
-            <p>Access your server with <code class="highlighter-rouge">ssh -i /home/ubuntu/snap/microstack/common/.ssh/id_microstack cirros@10.20.20.3</code></p>
           </li>
         </ol>
         <p>
-          That’s it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials" class="p-link--external">MicroStack tutorials</a>.
+          That's it! Your micro cloud is ready. You can now follow with <a href="https://ubuntu.com/openstack/tutorials" >MicroStack tutorials</a>.
         </p>
       </div>
     </div>
@@ -332,21 +349,21 @@ MicroStack is a pure upstream OpenStack platform, designed for the edge and smal
     <div class="row u-vertically-center">
       <div class="col-6">
         <h2>The team behind MicroStack</h2>
-        <p>MicroStack is maintained by the <a class="p-link--external" href="https://ubuntu.com/openstack">OpenStack team at Canonical</a>. We provide OpenStack packages on Ubuntu and have two OpenStack distributions of our own. MicroStack is an on-rails, opinionated OpenStack for the edge, micro clouds and developers. <a class="p-link--external" href="https://ubuntu.com/openstack/features">Charmed OpenStack</a> is a composable enterprise OpenStack for large scale deployments in data centres.</p>
+        <p>MicroStack is maintained by the <a href="https://ubuntu.com/openstack">OpenStack team at Canonical</a>. We provide OpenStack packages on Ubuntu and have two OpenStack distributions of our own. MicroStack is an on-rails, opinionated OpenStack for the edge, micro clouds and developers. <a href="https://ubuntu.com/openstack/features">Charmed OpenStack</a> is a composable enterprise OpenStack for large scale deployments in data centres.</p>
       </div>
-      <div class="col-5 u-hide--small u-align--center">
+      <div class="col-5 u-hide--small u-hide--medium u-align--center">
         <img src="https://assets.ubuntu.com/v1/60d9b81e-picto-canonical.svg" alt="Canonical" style="width : 160px; height:160px">
       </div>
     </div>
   </section>
   <section class="p-strip is-deep">
     <div class="row u-vertically-center">
-      <div class="col-5 u-hide--small u-align--center">
+      <div class="col-5 col-medium-2 u-hide--small u-align--center">
         <img src="https://assets.ubuntu.com/v1/c4b290c8-Contact+us.svg" alt="Contact us" style="width : 240px; height:171px">
       </div>
-      <div class="col-7">
+      <div class="col-7 col-medium-4">
         <h2>Get in touch</h2>
-        <p>Let’s talk about your edge and micro cloud plans.</p>
+        <p>Let's talk about your edge and micro cloud plans.</p>
         <p>
           <a class="p-button--positive" href="https://ubuntu.com/openstack/contact-us">
             Contact us
