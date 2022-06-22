@@ -8,6 +8,7 @@ from canonicalwebteam.discourse import (
     Docs,
     DocParser,
 )
+from canonicalwebteam import image_template
 
 # Rename your project below
 app = FlaskBase(
@@ -58,3 +59,8 @@ def sitemap_links():
     response.headers["Content-Type"] = "application/xml"
 
     return response
+
+
+@app.context_processor
+def utility_processor():
+    return {"image": image_template}
