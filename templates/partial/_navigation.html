@@ -1,13 +1,16 @@
 <header id="navigation" class="p-navigation">
     <div class="p-navigation__row">
       <div class="p-navigation__banner">
-        <div class="p-navigation__logo u-vertically-center">
-          <a class="p-navigation__item" href="/" style="color:white;">
-            MicroStack
+        <div class="p-navigation__tagged-logo">
+          <a class="p-navigation__link" href="#">
+            <div class="p-navigation__logo-tag">
+              <img class="p-navigation__logo-icon" src="https://assets.ubuntu.com/v1/82818827-CoF_white.svg" alt="">
+            </div>
+            <span class="p-navigation__logo-title">Canonical MicroStack</span>
           </a>
         </div>
-        <a href="#navigation" class="p-navigation__toggle--open u-no-padding--right" title="menu">Menu</a>
-        <a href="#navigation-closed" class="p-navigation__toggle--close u-no-padding--right" title="close menu">Close menu</a>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
       </div>
       <nav class="p-navigation__nav">
         <span class="u-off-screen">
@@ -27,6 +30,8 @@
             <a class="p-navigation__link" href="https://discourse.charmhub.io/search?q=microstack">Community</a>
           </li>
         </ul>
+
+        <ul class="p-navigation__items global-nav"></ul>
       </nav>
     </div>
 </header>
