@@ -22,7 +22,7 @@ function setupTabs() {
     var tabContent = document.querySelector(tabSelector);
   
     for (var i = 0; i < tabs.length; i += 1) {
-      if (tabs[i] !== tab) {
+      if (tabs[i] !== tab && tab.parentNode == tabs[i].parentNode) {
         var otherTabSelector = tabs[i].getAttribute('href');
         var otherTabContent = document.querySelector(otherTabSelector);
         
