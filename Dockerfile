@@ -2,7 +2,7 @@
 
 # Build stage: Install python dependencies
 # ===
-FROM ubuntu:focal AS python-dependencies
+FROM ubuntu:jammy AS python-dependencies
 RUN apt-get update && apt-get install --no-install-recommends --yes python3-pip python3-setuptools
 COPY requirements.txt /tmp/requirements.txt
 RUN --mount=type=cache,target=/root/.cache/pip pip3 install --user --requirement /tmp/requirements.txt
@@ -29,7 +29,7 @@ RUN yarn run build-css
 
 # Build the production image
 # ===
-FROM ubuntu:focal
+FROM ubuntu:jammy
 
 # Set up environment
 ENV LANG C.UTF-8
@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install --no-install-recommends --yes python3 pyth
 ENV PATH="/root/.local/bin:${PATH}"
 
 # Copy python dependencies
-COPY --from=python-dependencies /root/.local/lib/python3.8/site-packages /root/.local/lib/python3.8/site-packages
+COPY --from=python-dependencies /root/.local/lib/python3.10/site-packages /root/.local/lib/python3.10/site-packages
 COPY --from=python-dependencies /root/.local/bin /root/.local/bin
 
 # COPY necessary all files but remove those that are not required
