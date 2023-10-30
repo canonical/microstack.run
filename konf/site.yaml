@@ -1,6 +1,6 @@
 domain: microstack.run
 
-image: prod-comms.docker-registry.canonical.com/microstack.run
+image: prod-comms.ps5.docker-registry.canonical.com/microstack.run
 
 env:
   - name: SENTRY_DSN
