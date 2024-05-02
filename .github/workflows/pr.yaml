@@ -7,7 +7,6 @@ env:
 jobs:
   run-image:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - name: Build image
@@ -71,6 +70,7 @@ jobs:
 
   test-python:
     runs-on: ubuntu-20.04
+    timeout-minutes: 15
 
     steps:
       - uses: actions/checkout@v4
@@ -87,6 +87,9 @@ jobs:
         run: |
           sudo chmod -R 777 .
           dotrun install
+
+      - name: Install dependencies
+        run: dotrun exec pip3 install coverage
 
       - name: Build resources
         run: dotrun build
