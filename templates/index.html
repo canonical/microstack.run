@@ -46,7 +46,7 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
       <div class="col-6 p-card">
         <h3>Minimal footprint</h3>
         <hr class="u-sv1">
-        <p>MicroStack is optimised for a minimal footprint. Its resource requirements are lower than for vanilla OpenStack. All of that makes MicroStack suitable for devices with limited hardware resources, including workstations and edge infrastructure.</p>
+        <p>MicroStack is optimised for a minimal footprint. Its resource requirements are lower than for vanilla OpenStack. All of that makes MicroStack suitable for devices with limited hardware resources, such as the edge infrastructure.</p>
       </div>
       <div class="col-6 p-card">
         <h3>Sensible defaults</h3>
@@ -55,7 +55,7 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
       </div>
     </div>
     <div class="u-fixed-width">
-      <a class="p-button--positive" href="https://assets.ubuntu.com/v1/e61af23d-MicroStack%20datasheet.pdf">Download MicroStack Datasheet</a>
+      <a class="p-button--positive" href="https://assets.ubuntu.com/v1/d9d16aa2-MicroStack%20Datasheet%2022.04.2024.pdf">Download MicroStack Datasheet</a>
     </div>
   </section>
 
@@ -149,8 +149,8 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
       </div>
       <div class="col-6">
         <h2>OpenStack for developers</h2>
-        <p class="p-heading--4">On your workstation; in your CI/CD environment</p>
-        <p>Designed for devices with minimal hardware resources, MicroStack is perfectly suitable for developer workstations and <a href="https://ubuntu.com/engage/devops-cicd-webinar">CI/CD</a> environments.</p>
+        <p class="p-heading--4">Ideal for your CI/CD environment</p>
+        <p>Designed for devices with minimal hardware resources, MicroStack is perfectly suitable for <a href="https://ubuntu.com/engage/devops-cicd-webinar">CI/CD</a> environments.</p>
         <p>If you are using OpenStack in production, MicroStack effectively connects the dots between your cloud operations team and your developers. </p>
         <p>
           <a href="https://ubuntu.com/engage/openstack-ebook">Get free OpenStack e-book&nbsp;&rsaquo;</a>
@@ -175,44 +175,12 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
           </div>
         </div>
       </div>
-      <h3>Choose your OS</h3>
-    </div>
-    <div class="row u-equal-height u-sv2">
-      <a id="tab-one" href="#tab-one__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/53c3be42-linuc-logo.svg" style="height: 90px; margin-top: 1rem;" alt="">
-        <p class="p-heading--four" class="p-heading--five p-tab__title">Linux</p>
-      </a>
-      <a id="tab-two" href="#tab-two__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/11ecbd2d-2018-logo-windows.svg" style="height: 145px;" alt="Windows">
-      </a>
-      <a id="tab-three" href="#tab-three__content"
-        class="col-small-2 col-medium-2 col-4 p-card p-tab u-align--center u-vertically-center js-tab" role="tab">
-        <img src="https://assets.ubuntu.com/v1/236f314d-macos.svg" style="height: 145px;" alt="macOS">
-      </a>
     </div>
 
-    <div class="u-fixed-width js-tab__content" id="tab-one__content" role="tabpanel" aria-labelledby="tab-one">
+    <div class="u-fixed-width">
       <ol class="p-stepped-list u-no-margin--left">
         <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install Multipass</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sudo snap install multipass</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Get a fresh VM with Ubuntu 22.04 LTS</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>multipass launch --name microstack --cpus 4 --memory 16G --disk 50G && multipass shell microstack</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
+          <h3 class="p-stepped-list__title u-sv2">Install the snap MicroStack</h3>
           <div class="p-stepped-list__content">
             <div class="p-code-snippet">
               <pre class="p-code-snippet__block--icon"><code>sudo snap install openstack</code></pre>
@@ -247,141 +215,13 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
           <h3 class="p-stepped-list__title u-sv2">Launch a cloud instance</h3>
           <div class="p-stepped-list__content">
             <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam launch ubuntu -n test</code></pre>
+              <pre class="p-code-snippet__block--icon"><code>sunbeam launch ubuntu -nanem test</code></pre>
             </div>
           </div>
         </li>
       </ol>
       <p>
-        <a href="https://bugs.launchpad.net/snap-openstack/+filebug">Report a bug</a> or <a href="https://discourse.charmhub.io/tag/microstack">reach out to the MicroStack community</a> if you face any issues.
-      </p>
-    </div>
-
-    <div class="u-fixed-width js-tab__content" id="tab-two__content" role="tabpanel" aria-labelledby="tab-two">
-      <ol class="p-stepped-list u-no-margin--left">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install Multipass</h3>
-          <p class="p-stepped-list__content u-stepped-list-margin">
-            <a href="https://github.com/canonical/multipass/releases/download/v1.0.0/multipass-1.0.0%2Bwin-win64.exe" class="p-button--positive" data-os="win-win">
-              Download installer
-            </a>
-          </p>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Get a fresh VM with Ubuntu 22.04 LTS</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>multipass launch --name microstack --cpus 4 --memory 16G --disk 50G && multipass shell microstack</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sudo snap install openstack</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Prepare a machine</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam prepare-node-script | bash -x && newgrp snap_daemon</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Bootstrap OpenStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam cluster bootstrap --accept-defaults</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Configure OpenStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam configure --accept-defaults --openrc demo-openrc</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Launch a cloud instance</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam launch ubuntu -n test</code></pre>
-            </div>
-          </div>
-        </li>
-      </ol>
-      <p>
-        <a href="https://bugs.launchpad.net/snap-openstack/+filebug">Report a bug</a> or <a href="https://discourse.charmhub.io/tag/microstack">reach out to the MicroStack community</a> if you face any issues.
-      </p>
-    </div>
-
-    <div class="row js-tab__content" id="tab-three__content" role="tabpanel" aria-labelledby="tab-three">
-      <ol class="p-stepped-list u-no-margin--left">
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install Multipass</h3>
-          <p class="p-stepped-list__content ">
-            <a href="https://github.com/canonical/multipass/releases/download/v1.0.0/multipass-1.0.0%2Bmac-Darwin.pkg" class="p-button--positive" data-os="mac">
-              Download installer
-            </a>
-          </p>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Get a fresh VM with Ubuntu 22.04 LTS</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>multipass launch --name microstack --cpus 4 --memory 16G --disk 50G && multipass shell microstack</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Install MicroStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sudo snap install openstack</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Prepare a machine</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam prepare-node-script | bash -x && newgrp snap_daemon</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Bootstrap OpenStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam cluster bootstrap --accept-defaults</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Configure OpenStack</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam configure --accept-defaults --openrc demo-openrc</code></pre>
-            </div>
-          </div>
-        </li>
-        <li class="p-stepped-list__item">
-          <h3 class="p-stepped-list__title u-sv2">Launch a cloud instance</h3>
-          <div class="p-stepped-list__content">
-            <div class="p-code-snippet">
-              <pre class="p-code-snippet__block--icon"><code>sunbeam launch ubuntu -n test</code></pre>
-            </div>
-          </div>
-        </li>
-      </ol>
-      <p>
-        <a href="https://bugs.launchpad.net/snap-openstack/+filebug">Report a bug</a> or <a href="https://discourse.charmhub.io/tag/microstack">reach out to the MicroStack community</a> if you face any issues.
+        <a href="https://bugs.launchpad.net/snap-openstack/+filebug">Report a bug</a> or <a href="https://matrix.to/#/#openstack-sunbeam:ubuntu.com">reach out to the MicroStack community</a> if you face any issues.
       </p>
     </div>
   </section>
@@ -397,7 +237,7 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
         <img class="p-card__thumbnail--large" src="https://assets.ubuntu.com/v1/3a4d4155-Training.svg" alt="">
         <hr class="u-sv1">
         <p><a href="https://ubuntu.com/openstack/tutorials">Check our tutorials&nbsp;&rsaquo;</a></p>
-        <p class="p-card__content">Learn OpenStack through a series of tutorials. Starting with just your workstation, learn how to use OpenStack for cloud infrastructure implementation purposes, from a single-node installation to large-scale clusters.</p>
+        <p class="p-card__content">Learn OpenStack through a series of tutorials. Starting with just a single machine, learn how to use OpenStack for cloud infrastructure implementation purposes, from a single-node installation to large-scale clusters.</p>
       </div>
       <div class="col-6 p-card">
         <img class="p-card__thumbnail--large" src="https://assets.ubuntu.com/v1/dcb2963c-openstack+cloud+outlines.svg" alt="">
@@ -441,6 +281,5 @@ MicroStack delivers distilled OpenStack excellence with native K8s experience. O
 </main>
 
 <script src="{{ versioned_static('js/typer.js') }}" defer></script>
-<script defer src="{{ versioned_static('js/tabs.js') }}"></script>
 
 {% endblock %}
