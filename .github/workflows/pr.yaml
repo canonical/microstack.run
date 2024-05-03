@@ -77,12 +77,12 @@ jobs:
       - name: Install dotrun
         uses: canonical/install-dotrun@main
 
-      - name: Install node dependencies
+      - name: Install dependencies
         run: |
           sudo chmod -R 777 .
           dotrun install
 
-      - name: Install dependencies
+      - name: Install coverage
         run: dotrun exec pip3 install coverage
 
       - name: Build resources
