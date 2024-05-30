@@ -18,12 +18,12 @@
     "test-js": "jest"
   },
   "dependencies": {
-    "@canonical/cookie-policy": "3.5.0",
-    "@canonical/global-nav": "3.6.2",
+    "@canonical/cookie-policy": "3.6.3",
+    "@canonical/global-nav": "3.6.4",
     "autoprefixer": "10.4.13",
     "sass": "1.57.1",
     "postcss": "8.4.21",
-    "vanilla-framework": "4.8.0"
+    "vanilla-framework": "4.11.0"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
