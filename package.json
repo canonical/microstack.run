@@ -22,7 +22,7 @@
     "@canonical/global-nav": "3.6.4",
     "autoprefixer": "10.4.13",
     "sass": "1.57.1",
-    "postcss": "8.4.21",
+    "postcss": "8.4.32",
     "vanilla-framework": "4.11.0"
   },
   "devDependencies": {
