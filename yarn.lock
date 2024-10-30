@@ -4501,10 +4501,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@4.11.0:
-  version "4.11.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.11.0.tgz#81636d58bacbd3320a4eb6bf5bef00409cfdc008"
-  integrity sha512-S0AAHNVphn3YJ7BQhyHmvKhrqiZcncQBPedwMan18uavB4VfAT8UN0dwgrHQvY/ypUuJiq/GPA0Xe1xcd+E7dg==
+vanilla-framework@4.18.2:
+  version "4.18.2"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.18.2.tgz#b84bc1d95171ce44bafc141a03c7fec71587201b"
+  integrity sha512-wY+uO8rYEQzWspK6oddr0tHFFEE+GzqIgBoy5mku4W+2aeE259TfUHPCFNbpWRImQ8KShlYCYBcQ+ve+tGRB4g==
 
 vanilla-framework@4.9.0:
   version "4.9.0"
